@@ -11,10 +11,12 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormGroup } from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Page404Component } from './modules/page404/page404.component'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

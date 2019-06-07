@@ -26,7 +26,9 @@ const routes: Routes = [
       path:'',loadChildren:'./form/form.module#FormModule'
     },
     {
-      path:'thong-tin',component:ThongTinUserComponent
+      path:'thong-tin',component:ThongTinUserComponent,
+      canActivate : [AuthorGuard]
+
     }
 
     ]

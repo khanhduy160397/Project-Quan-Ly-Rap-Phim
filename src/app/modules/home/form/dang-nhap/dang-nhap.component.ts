@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { PhimService } from 'src/app/_core/services/phim.service';
 import Swal from 'sweetalert2'
@@ -19,7 +19,16 @@ export class DangNhapComponent implements OnInit {
   @ViewChild("login") login:NgForm;
 
   constructor(private service : PhimService) { }
-
+  handleSubmit:boolean=false;
+  @HostListener("window:beforeunload",["$event"])
+  canDeactivate($event):boolean {
+    if(this.handleSubmit){
+      return true;
+    }
+    else{ 
+      return this.login.submitted || !this.login.dirty;
+    }
+  }
   ngOnInit() {
   }
   dangNhap(user:any){

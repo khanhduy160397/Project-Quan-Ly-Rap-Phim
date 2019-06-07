@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import NguoiDung from 'src/app/_core/models/NguoiDung';
 import { PhimService } from 'src/app/_core/services/phim.service';
@@ -11,8 +11,17 @@ import Swal from 'sweetalert2';
 })
 export class DangKyComponent implements OnInit {
   @ViewChild("dangKyForm") dangKyForm:NgForm;
-
   constructor(private serviceNguoiDung: NguoiDungService ) { }
+  handleSubmit:boolean=false;
+  @HostListener("window:beforeunload",["$event"])
+  canDeactivate($event):boolean {
+    if(this.handleSubmit){
+      return true;
+    }
+    else{ 
+      return this.dangKyForm.submitted || !this.dangKyForm.dirty;
+    }
+  }
 
   ngOnInit() {
   }
