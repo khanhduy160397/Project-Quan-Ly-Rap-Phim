@@ -12,8 +12,11 @@ export class AdminAuthorGuard implements CanActivate {
   }
   canActivate(){
     let userLogin = JSON.parse(localStorage.getItem('userLogin'));
-    if(userLogin.MaLoaiNguoiDung !== 'QuanTri'){
+    if(userLogin && userLogin.MaLoaiNguoiDung !== 'QuanTri'){
       this.route.navigate(['**']);
+    }
+    else if(!userLogin){
+      this.route.navigate(['/dang-nhap'])
     }
     return true;
   }
