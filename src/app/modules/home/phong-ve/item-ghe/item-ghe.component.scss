@@ -1,0 +1,14 @@
+.ghe{
+    background-color: grey;
+    margin : 0.5rem;
+
+}
+.daDat{
+    background-color :red;
+    &:hover{
+        cursor: no-drop;
+    }
+}
+.dangChon{
+    background-color: orange;
+}

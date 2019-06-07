@@ -1,0 +1,79 @@
+<div class="form-style-6">
+    <h1>Cập nhật phim</h1>
+    <form #capNhat="ngForm" (ngSubmit)="CapNhat(capNhat.value)">
+        <input type="text" name="TaiKhoan" placeholder="{{nguoiDung.TaiKhoan}}" ngModel #TaiKhoan ='ngModel' required />
+        <div *ngIf = "TaiKhoan.errors && (TaiKhoan.dirty || TaiKhoan.touched)">
+            <div *ngIf="TaiKhoan.errors.required"  style="
+            background: #ff00005e;
+            padding: 1rem;
+            margin-bottom: 0.5rem;">
+                Không được để trống ! 
+            </div>
+        </div>
+    
+    <input type="text" name="HoTen" placeholder="{{nguoiDung.HoTen}}" ngModel #HoTen ='ngModel' required />
+    <div *ngIf = "HoTen.errors && (HoTen.dirty || HoTen.touched)">
+        <div *ngIf="HoTen.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <input type="text" name="Email" placeholder="{{nguoiDung.Email}}" #Email ='ngModel'  ngModel required />
+    <div *ngIf = "Email.errors && (Email.dirty || Email.touched)">
+        <div *ngIf="Email.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <select name="MaLoaiNguoiDung" #MaLoaiNguoiDung ='ngModel'  ngModel required>
+        <option value="QuanTri">QuanTri</option>
+        <option value="KhachHang">KhachHang</option>
+      </select>      
+    <!-- <input type="select" name="MaLoaiNguoiDung" placeholder="" #MaLoaiNguoiDung ='ngModel'  ngModel required /> -->
+    <div *ngIf = "MaLoaiNguoiDung.errors && (MaLoaiNguoiDung.dirty || MaLoaiNguoiDung.touched)">
+        <div *ngIf="MaLoaiNguoiDung.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <select name="MaNhom"  #MaNhom ='ngModel'  ngModel required>
+        <option value="GP01">GP01</option>
+        <option value="GP02">GP02</option>
+        <option value="GP03">GP03</option>
+        <option value="GP04">GP04</option>
+        <option value="GP05">GP05</option>
+        <option value="GP06">GP06</option>
+        <option value="GP07">GP07</option>
+        <option value="GP08">GP08</option>
+
+      </select>      
+
+    <div *ngIf = "MaNhom.errors && (MaNhom.dirty || MaNhom.touched)">
+        <div *ngIf="MaNhom.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="datetime" name="SoDT" placeholder="{{nguoiDung.SoDT}}" #SoDT ='ngModel'  ngModel required  />
+    <div *ngIf = "SoDT.errors && (SoDT.dirty || SoDT.touched)">
+        <div *ngIf="SoDT.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <input type="submit" [disabled]='!capNhat.valid' placeholder="Cập nhật" />
+    </form>
+</div>
+
+    

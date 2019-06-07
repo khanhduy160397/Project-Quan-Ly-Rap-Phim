@@ -1,0 +1,38 @@
+
+    .row{
+        background-color: black;
+        color: white;    
+        padding: 1.2rem;
+        margin: 0;
+        .aboutUs,.gocDienAnh,.socialArea{
+            text-align: left;
+            ul{
+                list-style: none;
+                font-size: 1rem;
+                padding: 0;
+                line-height: 2.5rem;
+                letter-spacing: 0.1rem;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+        .socialArea{
+            .social{
+                font-size: 2rem;
+                i{
+                    margin-right: 1rem;
+                    &:first-child{
+                        color : red;
+                    }
+                    &:nth-child(2){
+                        color: blue;
+                    }
+                    &:last-child{
+                        color:orange;
+                    }
+                }
+            }
+        }
+    }

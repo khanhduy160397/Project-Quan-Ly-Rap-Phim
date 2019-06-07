@@ -1,0 +1,10 @@
+<div class="card" >
+    <img class="card-img-top" src="{{movie.HinhAnh}}" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">{{movie.TenPhim}}</h4>
+      <p class="card-text">{{movie.MoTa.slice(0,200)}}...</p>
+      <div class="buyTicket">
+        <a class="btn btn-danger" (click)="ChiTietPhim()" >Mua vé</a>
+      </div>
+    </div>
+  </div>      

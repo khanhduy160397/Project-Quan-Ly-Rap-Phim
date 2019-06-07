@@ -1,0 +1,24 @@
+.detailFlim{
+    .blurItem{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .filmSchedule {
+        .abc{
+            margin: 1rem 0;
+            margin-left: 23rem!important;
+            .nav-item{
+                .nav-link{
+                    color: black;
+                    font-size: 1.5rem;
+                    &.active{
+                        background-color: orange;
+                    }
+                }
+            }
+        }
+        
+    }
+}

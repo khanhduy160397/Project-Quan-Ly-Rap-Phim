@@ -1,0 +1,55 @@
+<div class="form-style-10">
+    <h1>Đăng ký!<span>Trở thành thành viên để có được những ưu đãi tốt nhất!</span></h1>
+    <form #dangKyForm='ngForm' (ngSubmit)="dangKy(dangKyForm.value)">
+        <div class="section"><span>1</span>Họ Tên và Email</div>
+        <div class="inner-wrap">
+            <label>Họ và tên : <input type="text" name="hoTen" #hoTen='ngModel' ngModel required /></label>
+            
+            <div *ngIf="hoTen.errors && (hoTen.dirty || hoTen.touched)">
+                <div *ngIf="hoTen.errors.required" class="alert alert-danger">
+                    <p>Không được để rỗng</p>
+                </div>
+            </div>    
+
+            <label>Email <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" #email='ngModel' ngModel required/></label>
+            
+            <div *ngIf="email.errors && (email.dirty || email.touched)">
+                <div *ngIf="email.errors.required" class="alert alert-danger">
+                    <p>Không được để rỗng</p>
+                </div>
+                <!-- Kiểm tra định dạng email -->
+                <div *ngIf="email.errors.pattern" class="alert alert-danger">
+                    <p>Không đúng định dạng email</p>
+                </div>
+              </div>
+
+        </div>
+
+        <div class="section"><span>2</span>Số điện thoại & Tên tài khoản</div>
+        <div class="inner-wrap">
+            <label>Số điện thoại <input type="text" name="soDT" #soDT='ngModel' ngModel/></label>
+            <label>Tên tài khoản  <input type="text" name="taiKhoanDK" #taiKhoanDK='ngModel' ngModel required /></label>
+            <div *ngIf="taiKhoanDK.errors && (taiKhoanDK.dirty || taiKhoanDK.touched)">
+                <div *ngIf="taiKhoanDK.errors.required" class="alert alert-danger">
+                    <p>Không được để rỗng</p>
+                </div>
+            </div> 
+        </div>
+    
+        <div class="section"><span>3</span>Mật khẩu</div>
+            <div class="inner-wrap">
+            <label>Password <input type="password" name="matKhauDK" minlength="8" maxlength="15" #matKhauDK='ngModel' ngModel required /></label>
+            <div *ngIf="matKhauDK.errors && (matKhauDK.dirty || matKhauDK.touched)">
+                <div *ngIf="matKhauDK.errors.required" class="alert alert-danger">
+                    <p>Không được để rỗng</p>
+                </div>
+                <div *ngIf="matKhauDK.errors.minlength || matKhauDK.errors.maxlength " class="alert alert-danger">
+                    <p>Mật khẩu có độ dài từ 8 - 15 kí tự</p>
+                </div>
+            </div> 
+        </div>
+        <div class="button-section">
+         <input type="submit" name="Sign Up"  [disabled]='!dangKyForm.valid' />
+        </div>
+    </form>
+    </div>

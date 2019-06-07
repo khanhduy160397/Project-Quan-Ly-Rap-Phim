@@ -1,0 +1,26 @@
+<div class="form-style-6">
+    <h1>Đăng nhập</h1>
+    <form #login="ngForm" (ngSubmit)="dangNhap(login.value)">
+    <input type="text" name="taiKhoan" placeholder="Tài khoản" #taiKhoan='ngModel' ngModel required />
+    <div *ngIf = "taiKhoan.errors && (taiKhoan.dirty || taiKhoan.touched)">
+        <div *ngIf="taiKhoan.errors.required" style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <input type="email" name="matKhau" placeholder="Mật khẩu" #matKhau='ngModel' ngModel required />
+    <div *ngIf = "matKhau.errors && (matKhau.dirty || matKhau.touched)">
+        <div *ngIf="matKhau.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="submit" [disabled]='!login.valid' value="Send" />
+    </form>
+</div>
+    

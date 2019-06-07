@@ -1,0 +1,545 @@
+.container{
+    .nav.nav-pills{
+        margin: 1rem 0;
+        margin-left: 23rem!important;
+        .nav-item{
+            .nav-link{
+                color: black;
+                font-size: 1.5rem;
+                &.active{
+                    background-color: orange;
+                }
+            }
+        }
+    }
+    .tab-content{
+        .tab-pane{
+            .item{
+                margin-right: 0.3rem;
+                overflow: hidden;
+               
+                .itemPhim{
+                    position: relative;
+                    overflow: hidden;
+                    &:hover .overlay{
+                        opacity: 1;
+                        transition: all 1.2s;
+                    }
+                    img{
+                        width: 100%;
+                        display: block;
+                        height: 25rem;
+                    }
+                }
+                .overlay{
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: 13rem 11rem;
+                    background-color: rgba(black, $alpha: 0.5);
+                    .btn-playTrailer{
+                        top: 24%;
+                        left:24%;
+                        position: absolute;
+                        a{
+                            font-size: 5rem;
+                            color: rgb(221, 179, 101);
+                        }
+                    }
+                    .btn-buyTicket{
+                        
+                        position: absolute;
+                        top: 55%;
+                        left: 12%;
+                        button{
+                            
+                            background: rgba($color: #000000, $alpha: 0.5);
+                            width: 10rem;
+                            padding : 1rem;
+                            border:0.2rem solid white;
+                            &:hover{
+                                background-color: orange;
+                            }
+                            p{
+                                margin:unset;
+                                color: white;
+                            }
+                        }
+
+                    }
+                }
+                .tenPhim{
+                    white-space: pre-wrap;	
+                }
+                
+            }
+        }
+    }
+    
+}
+.btn-xemThem{
+    // margin-left: 7.2rem;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: rgba($color: #000000, $alpha: 0.5);
+    border:0.2rem solid white;
+    &:hover{
+        background-color: orange;
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
+@media screen and (max-width : 1198px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 16rem!important ;
+            
+        }    
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 20rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 20%;
+                                    top: 20%
+                                }
+                                .btn-buyTicket{
+                                    left: 8%;
+                                    top: 48%
+                                }
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width : 992px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 9.5rem!important ;
+            
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 12%;
+                                    top: 10%;
+                                    i{
+                                        font-size: 4rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 4.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 7rem;
+                                        padding : 0.5rem;
+
+                                    }
+                                }
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+    .btn-xemThem{
+        // margin-left: 2.5rem;
+    }
+
+}
+
+@media screen and (max-width : 772px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 9.5rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 35.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 29.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }     
+
+    }
+
+}
+// Ipad 
+@media screen and (max-width : 768px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 9.5rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 30.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 4rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 13.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 7rem;
+                                        padding : 0.5rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 5rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }     
+
+    }
+
+}
+@media screen and (max-width : 576px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 5rem!important ;
+        }    
+    }
+
+}
+// Iphone 6+/7+/8+
+@media screen and (max-width : 414px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 5.5rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 25.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 19.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+
+}
+
+// Pixel
+@media screen and (max-width : 411px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 5rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 25.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 19.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+
+}
+// Iphone 6/7/8
+@media screen and (max-width : 375px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 4rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 21.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 15.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+
+}
+
+// GLX s5
+@media screen and (max-width : 360px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 4rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 20.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 13.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+
+}
+// Iphone 5 / SE
+@media screen and (max-width : 320px){
+    .container{
+        .nav.nav-pills{
+            margin-left: 2.5rem!important ;
+        }
+        .tab-content{
+            .tab-pane{
+                .item{
+                    .row{
+                        .col-md-3{
+                            .itemPhim{
+                                img{
+                                    height: 15rem;
+                                }
+                                .btn-playTrailer{
+                                    left: 17.5%;
+                                    top: 8%;
+                                    i{
+                                        font-size: 5rem;
+                                    }
+                                }
+                                .btn-buyTicket{
+                                    left: 10.5%;
+                                    top: 36%;
+                                    button{
+                                        width: 9rem;
+                                        padding : 1rem;
+
+                                    }
+                                }
+                            }
+                            .overlay{
+                                padding: 13rem 18rem;
+                            }
+                            .tenPhim{
+
+                                h4{
+                                    font-size: 1.3rem;
+                                    margin: 1.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+
+}
+// Iphone X 

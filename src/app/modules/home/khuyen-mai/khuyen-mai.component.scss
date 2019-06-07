@@ -1,0 +1,24 @@
+.myPromo{
+    h1{
+        margin-bottom: 2rem;
+        a{
+            text-decoration: none;
+            color:black;
+            border-bottom: 0.3rem solid orange;
+            &:hover{
+                color: orange;
+                transition: all 0.2s;
+            }
+    
+        }
+    }
+    width: 90%;
+    margin: 2rem auto;
+    .col-md-3{
+        margin-bottom: 1.5rem;
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}

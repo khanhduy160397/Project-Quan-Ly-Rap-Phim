@@ -1,0 +1,10 @@
+<section class="nowShowing container mt-5 mb-5">
+  <h1 class="text-center mb-5">Phim đang chiếu</h1>
+  <div class="row">
+    <div class="col-md-3" *ngFor='let item of dsPhim | paginate: { itemsPerPage: 8, currentPage: p }'>
+      <app-item-phim [movie]='item'></app-item-phim>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</section>

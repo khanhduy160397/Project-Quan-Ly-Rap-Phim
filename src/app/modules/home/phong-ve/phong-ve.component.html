@@ -1,0 +1,54 @@
+<section class="phongVe container" >
+    <ng-container *ngIf="(chiTietPhim | json) !== '{}' ">  
+  <div class="title">
+      <h1 class="text-center">
+        BOOKING ONLINE
+      </h1>
+    </div>
+    <div class="thongTinRap">
+      <p>Pandora Cinema Plaza | Gold Class | Số ghế (1/60)</p>
+      <p>31/05/2019 20:00 ~ 31/05/2019 22:35</p>
+    </div>
+    <div class="bookingArea">
+      <img src="../../../../assets/img/bg-screen.png" alt="">
+      <div class="gheArea" >
+        <ng-container *ngFor='let item of dsGhe.DanhSachGhe , let index = index' >
+            <app-item-ghe [ghe]='item' (eventDatGhe)='datGhe($event)'></app-item-ghe>
+            <br *ngIf="(index +1) % 10 ===0">
+        </ng-container>
+      </div>
+    </div>
+      <div class="paymentArea">
+        <div class="row">
+          <div class="col-md-3">
+            <img src={{chiTietPhim.HinhAnh}} alt="">
+          </div>
+          <div class="col-md-3">
+            <h4>{{chiTietPhim.TenPhim}} </h4>
+          </div>
+          <div class="col-md-3">
+              <p>{{chiTietPhim.LichChieu[0].Rap.TenRap}} </p>
+              <p>Ngày chiếu : {{chiTietPhim.LichChieu[0].NgayChieuGioChieu | date : 'dd-MM-yy'}}</p>
+            <p>Ghế :<span *ngFor="let item of danhSachGheDangChon"> {{item.TenGhe}}, </span></p>
+            <ng-container >
+            </ng-container>
+          </div>
+          <div class="col-md-3">
+            <p>Tổng cộng : {{tongCong}}  </p>
+            <button class="btn btn-danger" (click)="muaVe()">Mua vé</button>
+          </div>
+        </div>
+      </div>
+  
+    </ng-container>
+
+    <ng-container *ngIf="(chiTietPhim | json) == '{}' ">
+      <div class="container">
+          <h1 class="text-center text-danger">Bạn chưa chọn phim . Hãy quay lại trang chủ để chọn</h1>
+          <div class="mx-auto">
+          <button class="myButton" routerLink="">Trang chủ</button>
+        </div>
+      </div>
+    </ng-container>
+
+</section>

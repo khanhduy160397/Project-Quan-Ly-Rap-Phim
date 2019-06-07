@@ -1,0 +1,76 @@
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home" id="lichChieu">Phim đang chiếu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Phim sắp chiếu</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content" href="#lichChieu">
+    <div class="tab-pane container fade in show active" id="home">
+      <div class="item">
+        <div class="row">
+          <div class="col-md-3" *ngFor="let item of dsPhim">
+            <div class="itemPhim">
+  
+              <img data-src={{item.HinhAnh}} alt="">
+              <div class="overlay">
+                <div class="btn-playTrailer">
+                  <a href=''data-toggle="modal" data-target="#myModal" >
+                    <i class="fa fa-play-circle" ></i>
+                  </a>
+                </div>
+                <div class="btn-buyTicket">
+                  <button class="btn" [routerLink]="['/danh-sach-phim/phim/',item.MaPhim]"
+                    [queryParams]="{phim : item.TenPhim}">
+                    <p>Mua vé</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tenPhim text-center">
+              <h4>{{item.TenPhim}}</h4>
+            </div>
+            <app-item-home-showing [movie]='item'></app-item-home-showing>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane container fade" id="menu1">
+        <div class="item">
+            <div class="row">
+              <div class="col-md-3" *ngFor="let item of dsPhim">
+                <div class="itemPhim">
+      
+                  <img data-src={{item.HinhAnh}} alt="">
+                  <div class="overlay">
+                    <div class="btn-playTrailer">
+                      <a href=''data-toggle="modal" data-target="#myModal" >
+                        <i class="fa fa-play-circle" ></i>
+                      </a>
+                    </div>
+                    <div class="btn-buyTicket">
+                      <button class="btn" [routerLink]="['/danh-sach-phim/phim/',item.MaPhim]"
+                        [queryParams]="{phim : item.TenPhim}">
+                        <p>Mua vé</p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tenPhim text-center">
+                  <h4>{{item.TenPhim}}</h4>
+                </div>
+                <app-item-home-showing [movie]='item'></app-item-home-showing>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <button class="btn btn-success btn-xemThem" routerLink="/danh-sach-phim">Xem thêm</button>
+
+</div>

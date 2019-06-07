@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Tài khoản</th>
+        <th>Email</th>
+        <th>Mã loại người dùng</th>
+        <th>Loại người dùng</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody  >
+      <tr *ngFor='let item of dsNguoiDung'  >
+          <td>{{item.Email}}</td>
+          <td>{{item.MaLoaiNguoiDung}}</td>
+          <td>{{item.TenLoaiNguoiDung}}</td>
+          <td>
+            <button mat-raised-button color="primary" (click)="xoa(item.TaiKhoan)" class="btn-themMoi ml-2" >Xóa</button>
+            <button mat-raised-button color="ascent" (click)="sua(item.TaiKhoan)" class="btn-themMoi ml-2" >Sửa</button>            
+          </td>          
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<router-outlet></router-outlet>

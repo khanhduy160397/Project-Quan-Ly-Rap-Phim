@@ -1,0 +1,96 @@
+<section class="detailFilm">
+  <div class="blurItem">
+    <img src={{chiTietPhim.HinhAnh}} style="filter: blur(10px);">
+    <div class="itemFilm d-flex">
+      <div class="row  ">
+        <div class="col-md-6 col-xs-6 col-sm-6">
+          <img src={{chiTietPhim.HinhAnh}}>
+        </div>
+        <div class="col-md-6 col-xs-6 col-sm-6 contentPhim">
+          <h2>{{chiTietPhim.TenPhim}}</h2>
+          <h4>Ngày khởi chiếu : <p>{{chiTietPhim.NgayKhoiChieu | date : 'dd-MM-yyyy'}}</p> </h4>
+          <h4>Đánh giá : <i class="fa fa-star" aria-hidden="true"></i> {{chiTietPhim.DanhGia}}/{{chiTietPhim.DanhGia}}</h4>
+          <button class="btn btn-muaVe" pageScroll href="#phim">Mua vé</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filmSchedule container mt-5">
+      <ul class="nav nav-pills abc">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home" id="phim" >Lịch chiếu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Thông tin phim</a>
+          </li>
+        </ul>
+         <!-- Tab panes -->
+  <div class="tab-content">
+      <div class="tab-pane container active" id="home">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <table class="table table-dark table-hover ">
+                      <thead>
+                          <tr>
+                            <th>Lịch chiếu</th>
+                            <th>Giờ chiếu</th>
+                            <th>Rạp</th>
+                            <th>Giá vé</th>
+                          </tr>
+                      </thead>
+                    <tbody>
+                      <!-- <tr *ngFor="let item of movie.LichChieu">
+                          <td>{{item.NgayChieuGioChieu | date : 'dd-MM-yyyy'}}</td>
+                          <td>{{item.NgayChieuGioChieu | date : 'shortTime'}}</td>
+                          <td>{{item.Rap.TenRap}}</td>
+                          <td>{{item.GiaVe}}</td>
+                          <td><button class="btn btn-primary" (click)="muaVe(item.MaLichChieu)">Mua vé</button></td>
+                      </tr> -->
+                      <tr *ngFor="let item of chiTietPhim.LichChieu">
+                        <td>{{item.NgayChieuGioChieu | date : 'dd-MM-yy'}} </td>
+                        <td>{{item.NgayChieuGioChieu | date : 'shortTime'}}</td>
+                        <td>{{item.Rap.TenRap}}</td>
+                        <td>{{item.GiaVe | number}} VND</td>
+                        <td><button class="btn btn-primary" [routerLink]="['/phong-ve/',item.MaLichChieu]">Mua vé</button></td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+      </div>
+      <div class="tab-pane container fade" id="menu1">
+          <div class="row container infoPhim">
+              <div class="col-md-3 col-xs-3 col-sm-3">
+                  <p>Ngày phát hành</p>
+                  <p>Đạo diễn</p>
+                   <p>Diễn viên</p>
+                   <p>Thể Loại
+                    </p>
+                    <p>Định dạng
+                      </p>
+                      <p>Quốc Gia SX
+                        </p>
+              </div>
+              <div class="col-md-3 col-xs-3 col-sm-3">
+                  <p>{{chiTietPhim.NgayKhoiChieu | date : 'dd-MM-yyyy'}}</p>
+                  <p>Michael Dougherty</p>
+                  <p>Bradley Whitford, Kyle Chandler, Sally Hawkins, Vera Farmiga, Millie Bobby Brown, Michael Dougherty</p>
+                  <p>hành động, khoa học, viễn tưởng</p>
+                  <p>2D/Digital/3D/IMAX/4DX</p>
+                  <p>Mỹ</p>
+              </div>
+              <div class="col-md-6 col-xs-3 col-sm-3">
+                <p>Nội dung</p>
+                <p>{{chiTietPhim.MoTa}}
+                  </p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- Tab panes -->
+        
+  </div>
+</section>
+  
+ 

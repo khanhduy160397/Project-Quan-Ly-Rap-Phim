@@ -1,0 +1,81 @@
+.phongVe{
+    .title{
+        margin-top: 1rem;
+        background-color: black;
+        color: white;
+    }
+    .thongTinRap{
+        background-color: rgb(241, 179, 64);
+        font-weight: bold;
+        padding: 0.4rem 1rem;
+        font-size: 1.2rem;
+    }
+    .bookingArea{
+        img{
+            width: 100%;
+            margin: 0 auto;
+            margin: 2rem 0;
+        }
+        .gheArea{
+            margin: 3rem auto;
+            margin-left: 16.5rem;
+            
+        }
+        
+    }
+    .paymentArea{
+        margin: 5rem 0;
+        img{
+            width: 100%;
+            height: 20rem;
+        }
+        .col-md-3{
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+    .myButton {
+        -moz-box-shadow:inset 0px -4px 44px -13px #cf866c;
+        -webkit-box-shadow:inset 0px -4px 44px -13px #cf866c;
+        box-shadow:inset 0px -4px 44px -13px #cf866c;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e6a545), color-stop(1, #bc3315));
+        background:-moz-linear-gradient(top, #e6a545 5%, #bc3315 100%);
+        background:-webkit-linear-gradient(top, #e6a545 5%, #bc3315 100%);
+        background:-o-linear-gradient(top, #e6a545 5%, #bc3315 100%);
+        background:-ms-linear-gradient(top, #e6a545 5%, #bc3315 100%);
+        background:linear-gradient(to bottom, #e6a545 5%, #bc3315 100%);
+        margin-left:29rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6a545', endColorstr='#bc3315',GradientType=0);
+        background-color:#e6a545;
+        -moz-border-radius:9px;
+        -webkit-border-radius:9px;
+        border-radius:9px;
+        border:2px solid #942911;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:20px;
+        padding:17px 24px;
+        text-decoration:none;
+        text-shadow:3px 6px 15px #854629;
+    }
+    .myButton:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #e6a545));
+        background:-moz-linear-gradient(top, #bc3315 5%, #e6a545 100%);
+        background:-webkit-linear-gradient(top, #bc3315 5%, #e6a545 100%);
+        background:-o-linear-gradient(top, #bc3315 5%, #e6a545 100%);
+        background:-ms-linear-gradient(top, #bc3315 5%, #e6a545 100%);
+        background:linear-gradient(to bottom, #bc3315 5%, #e6a545 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#e6a545',GradientType=0);
+        background-color:#bc3315;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    
+}

@@ -1,0 +1,92 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="../../../../assets/img/logo.jpg" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{nguoiDung.HoTen}}
+					</div>
+					<div class="profile-usertitle-job">
+						{{nguoiDung.MaLoaiNguoiDung}}
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="pill" href="#infoUser">Thông tin chi tiết</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="pill" href="#historyPayment">Lịch sử đặt vé</a>
+                    </li>
+                  </ul>
+                  
+                  <!-- Tab panes -->
+                  <div class="tab-content mt-5">
+                    <div class="tab-pane container active" id="infoUser">
+                        <form [formGroup]="formCapNhat" class="form-style-9" (ngSubmit)="capNhat()">
+                            <ul>
+                            <li>
+                                <input type="text" name="hoTenCN" class="field-style field-split align-left" placeholder="Họ tên" value={{nguoiDung.HoTen}}   formControlName="HoTen"/> 
+                                <input type="email" name="emailCN" class="field-style field-split align-right"  placeholder="Email"  value={{nguoiDung.Email}}  formControlName="Email" />
+                            
+                            </li>
+                            <li>
+                                <input type="text" name="soDTCN" class="field-style field-split align-left" placeholder="Số điện thoại" value={{nguoiDung.SoDT}} formControlName="SoDT" />
+                            </li>
+                            <li>
+                            <input type="submit" class="mt-2" value="Cập nhật thông tin" />
+                            </li>
+                            </ul>
+                            </form>
+                    </div>
+                    <div class="tab-pane container fade" id="historyPayment">
+                        <div class="container">
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>Tên phim </th>
+                                  <th>Rạp</th>
+                                  <th>Ngày đặt</th>
+                                  <th>Giá vé</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor='let item of nguoiDung.DanhSachVeDaDat | paginate: { itemsPerPage: 5, currentPage: p } '>
+                                    <td>{{item.TenPhim}}</td>
+                                    <td>{{item.Rap}}</td>
+                                    <td>{{item.NgayDat | date : 'dd-MM-yyyy' }}</td>
+                                    <td>{{item.GiaVe | number}}</td>  
+                                </tr>
+                                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                              </tbody>
+                            </table>
+                          </div>                          
+                    </div>
+                  </div>
+                  
+            </div>
+		</div>
+	</div>
+</div>

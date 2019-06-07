@@ -1,0 +1,68 @@
+<div class="form-style-6">
+    <h1>Cập nhật phim</h1>
+    <form #capNhat="ngForm" (ngSubmit)="CapNhat(capNhat.value)">
+    <input type="text" name="MaPhim" placeholder="{{dsPhimCapNhat.MaPhim}}" ngModel #MaPhim ='ngModel' required />
+    <div *ngIf = "MaPhim.errors && (MaPhim.dirty || MaPhim.touched)">
+        <div *ngIf="MaPhim.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+    <input type="text" name="TenPhim" placeholder="{{dsPhimCapNhat.TenPhim}}" #TenPhim ='ngModel'  ngModel required />
+    <div *ngIf = "TenPhim.errors && (TenPhim.dirty || TenPhim.touched)">
+        <div *ngIf="TenPhim.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="text" name="Trailer" placeholder="{{dsPhimCapNhat.Trailer}}" #Trailer ='ngModel'  ngModel required />
+    <div *ngIf = "Trailer.errors && (Trailer.dirty || Trailer.touched)">
+        <div *ngIf="Trailer.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="text" name="MoTa" placeholder="{{dsPhimCapNhat.MoTa}}"  #MoTa ='ngModel'  ngModel required  />
+    <div *ngIf = "MoTa.errors && (MoTa.dirty || MoTa.touched)">
+        <div *ngIf="MoTa.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="datetime" name="NgayKhoiChieu" placeholder="{{dsPhimCapNhat.NgayKhoiChieu}}" #NgayKhoiChieu ='ngModel'  ngModel required  />
+    <div *ngIf = "NgayKhoiChieu.errors && (NgayKhoiChieu.dirty || NgayKhoiChieu.touched)">
+        <div *ngIf="NgayKhoiChieu.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+    <input type="text" name="DanhGia" placeholder="{{dsPhimCapNhat.DanhGia}}" #DanhGia ='ngModel'  ngModel required />
+    <div *ngIf = "DanhGia.errors && (DanhGia.dirty || DanhGia.touched)">
+        <div *ngIf="DanhGia.errors.required"  style="
+        background: #ff00005e;
+        padding: 1rem;
+        margin-bottom: 0.5rem;">
+            Không được để trống ! 
+        </div>
+    </div>
+
+
+    <input type="submit" [disabled]='!capNhat.valid' placeholder="Cập nhật" />
+    </form>
+</div>
+
+    

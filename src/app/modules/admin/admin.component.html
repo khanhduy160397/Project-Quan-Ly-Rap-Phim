@@ -1,0 +1,20 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <img src="../../../assets/img/logo.jpg" style="display:block">
+    <h4 class="ml-4 text-danger mt-3">Trang quản trị</h4>
+    <mat-card class="example-card mt-3">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{userLogin.HoTen}}</mat-card-title>
+        <mat-card-subtitle class="card-sub">Chức vụ : {{userLogin.MaLoaiNguoiDung}}</mat-card-subtitle>
+    </mat-card-header>
+    </mat-card>
+    <button mat-raised-button color="primary" class="btn-themMoi" routerLink="/">Trang chủ</button>
+    <button mat-raised-button color="primary" class="btn-themMoi" routerLink="/admin/danh-sach-phim/phim" style="display:block">Danh sách phim</button>
+    <button mat-raised-button color="primary" class="btn-themMoi" routerLink="/admin/them-phim">Thêm phim mới</button>
+    <button mat-raised-button color="primary" class="btn-themMoi" routerLink="/admin/nguoi-dung">Danh sách người dùng</button>
+
+
+  </mat-drawer>  
+  <router-outlet></router-outlet>
+</mat-drawer-container>

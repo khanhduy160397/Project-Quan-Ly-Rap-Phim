@@ -1,0 +1,181 @@
+.myNews{
+    h1{
+        a{
+        border-bottom: 0.3rem solid orange;
+        cursor: pointer;
+        }
+    }
+    .title-comment{
+        border-bottom : 0.2rem solid orange;
+        color: black;
+        &:hover{
+            color: orange;
+            transition: all 0.2s;
+        }
+    }
+    .comment-film{
+        .col-md-5{
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .col-md-7{
+            
+            .content-news{
+                opacity: 0.5;
+                font-size: 1rem;
+                font-style: italic;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+            &:hover a{
+                color:orange;
+                transition: all 0.2s;
+            }
+            p{
+                font-weight: bold;
+                i{
+                    color: rgb(252, 255, 55)
+                    
+                }
+            }
+            
+        }
+    }
+    .blogDienAnh{
+        .title-blog{
+            border-bottom : 0.2rem solid orange;
+            color: black;
+            text-decoration: none;
+            &:hover{
+                color: orange;
+                transition: all 0.2s;
+            }
+    
+        }
+        .col-md-5{
+            img{
+                width: 100%;
+                display: block;
+            }
+
+        }
+        .col-md-7{
+            .content-blog{
+                opacity: 0.5;
+                font-size: 1rem;
+                font-style: italic;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+            &:hover a{
+                color:orange;
+                transition: all 0.2s;
+            }
+            p{
+                font-weight: bold;
+                i{
+                    color: rgb(25, 26, 18)
+                    
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px)
+{
+    .comment-film{
+        .col-md-5{
+            img{
+                width: 100%;
+                display: block;
+                height: 15rem;
+            }
+        }
+        .col-md-7{
+            h5{
+                font-size: 1rem;
+            }
+          
+            .content-news{
+                
+
+                opacity: 0.5;
+                font-size: 0.9rem;
+                font-style: italic;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+            &:hover a{
+                color:orange;
+                transition: all 0.2s;
+            }
+            p{
+                font-size: 0.9rem;
+                font-weight: bold;
+                i{
+                    color: rgb(252, 255, 55)
+                    
+                }
+            }
+            
+        }
+    }
+    .blogDienAnh{
+        .title-blog{
+            border-bottom : 0.2rem solid orange;
+            color: black;
+            text-decoration: none;
+            &:hover{
+                color: orange;
+                transition: all 0.2s;
+            }
+    
+        }
+        .col-md-5{
+            img{
+                width: 100%;
+                display: block;
+                height: 15rem;
+            }
+
+        }
+        h5{
+            font-size: 0.9rem;
+        }
+        .col-md-7{
+            .content-blog{
+                opacity: 0.5;
+                font-size: 0.9rem;
+                font-style: italic;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                
+            }
+            &:hover a{
+                color:orange;
+                transition: all 0.2s;
+            }
+            p{
+                font-weight: bold;
+                font-size: 0.9rem;
+                i{
+                    color: rgb(25, 26, 18)
+                    
+                }
+            }
+        }
+    }
+}
