@@ -1,5 +1,5 @@
 <div class="form-style-6">
-    <h1>Cập nhật phim</h1>
+    <h1>Cập nhật người dùng</h1>
     <form #capNhat="ngForm" (ngSubmit)="CapNhat(capNhat.value)">
         <input type="text" name="TaiKhoan" placeholder="{{nguoiDung.TaiKhoan}}" ngModel #TaiKhoan ='ngModel' required />
         <div *ngIf = "TaiKhoan.errors && (TaiKhoan.dirty || TaiKhoan.touched)">
@@ -63,9 +63,9 @@
         </div>
     </div>
 
-    <input type="datetime" name="SoDT" placeholder="{{nguoiDung.SoDT}}" #SoDT ='ngModel'  ngModel required  />
-    <div *ngIf = "SoDT.errors && (SoDT.dirty || SoDT.touched)">
-        <div *ngIf="SoDT.errors.required"  style="
+    <input type="datetime" name="MatKhau" placeholder="Mật khẩu" #MatKhau ='ngModel'  ngModel required  />
+    <div *ngIf = "MatKhau.errors && (MatKhau.dirty || MatKhau.touched)">
+        <div *ngIf="MatKhau.errors.required"  style="
         background: #ff00005e;
         padding: 1rem;
         margin-bottom: 0.5rem;">
